@@ -21,4 +21,5 @@ with open("my_data.txt", "w") as my_textfile:
 
 # load file and print it's content
 with open("my_data.txt") as my_textfile:
-    print(my_textfile.read())
+    my_phonebook = my_textfile.read()
+    my_phonebook[phone]
