@@ -16,6 +16,8 @@ print(my_name)
 print(my_name)
 print(my_name)
 
+# my_age = type int
+my_age = 18
 
 # end of program
 # delete my_name from memory
