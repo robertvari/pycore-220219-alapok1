@@ -1,6 +1,8 @@
 # string type (str)
 "Vári Róbert"
 'Vári Róbert'
+"It's my birthday."
+'It's my birthday'
 
 # booleans
 True, False
