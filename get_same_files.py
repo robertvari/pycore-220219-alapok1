@@ -15,4 +15,4 @@ folder_2_set = set(folder_2_content)
 same_files = list(folder_1_set & folder_2_set)
 
 #same_files = list(set(folder_1_content) & set(folder_2_content))
-#print(same_files)
+print(same_files)
