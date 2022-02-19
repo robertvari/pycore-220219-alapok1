@@ -1,5 +1,5 @@
 phonebook = {
-    #     key        value
+    #   root key        value
     "06206473859": {"name": "Robert Vari", "address": "Budapest", "email": "mail.pythonsuli@gmail.com"},
     "06206473851": {"name": "Kiss Csaba", "address": "Debrecen", "email": "csaba@gmail.com"},
     "06309874653": {"name": "Kocsis Krisztina", "address": "Pécs", "email": "kriszta@gmail.com"}
