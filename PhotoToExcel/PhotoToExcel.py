@@ -59,10 +59,20 @@ for photo_file in photo_files:
     photo_data[photo_file]["date"] = exif_data.get(306)
     photo_data[photo_file]["iso"] = exif_data.get(34855)
 
-    pass
-
 
 # todo create excel sheet
+workbook = Workbook()
+sheet = workbook.active
+
+sheet["A1"] = "File Path"
+sheet["B1"] = "Date"
+sheet["C1"] = "Size"
+sheet["D1"] = "Camera"
+sheet["E1"] = "ISO"
+
+workbook.save("photo_data.xlsx")
+
+
 # todo loop through photo_data
     # todo collect data to an excel sheet
 
