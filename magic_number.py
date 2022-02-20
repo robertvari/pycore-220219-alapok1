@@ -18,7 +18,17 @@ user_guess = input("Your guess:")
 # game loop
 #                True
 while user_guess != str(magic_number):
-    print("Wrong number :(")
+    max_tries -= 1
+
+    if max_tries == 0:
+        print("You have no more tries :(")
+        print("Maybe next time!")
+        break
+
+    print(f"Wrong number :( You have {max_tries} tries left.")
     user_guess = input("Your guess:")
 
-print("Game ends...")
+if user_guess == str(magic_number):
+    print(f"You win!!! My number was {max_number}")
+else:
+    print("Game over...")
