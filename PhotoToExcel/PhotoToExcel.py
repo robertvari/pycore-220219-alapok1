@@ -31,11 +31,20 @@ for i in folder_content:
 
 
 # todo create a dictionary for store photo data: photo_data = {}
+photo_data = {}
 
 # todo loop through file list
+for photo_file in photo_files:
+    photo_data[photo_file] = {
+        "size": None,
+        "date": None,
+        "camera": None,
+        "iso": None
+    }
     # todo collect exif data from photo
     # todo add data to photo_data = {}
 
+pass
 
 # todo create excel sheet
 # todo loop through photo_data
