@@ -44,10 +44,23 @@ for photo_file in photo_files:
         "camera": None,
         "iso": None
     }
-    # todo collect exif data from photo
-    # todo add data to photo_data = {}
 
-pass
+    img = Image.open(photo_file)
+    photo_data[photo_file]["size"] = img.size
+
+    exif_data = img._getexif()
+
+    if not exif_data:
+        continue
+
+    # collect exif data from photo
+    # add data to photo_data = {}
+    photo_data[photo_file]["camera"] = exif_data.get(272)
+    photo_data[photo_file]["date"] = exif_data.get(306)
+    photo_data[photo_file]["iso"] = exif_data.get(34855)
+
+    pass
+
 
 # todo create excel sheet
 # todo loop through photo_data
