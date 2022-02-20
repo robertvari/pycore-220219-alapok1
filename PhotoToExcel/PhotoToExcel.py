@@ -19,13 +19,17 @@ folder_content = os.listdir(photo_folder)
 photo_files = []
 allowed_extensions = [".jpg", ".jpeg", ".png"]
 
-name, age, address = "Robert", 23, "Budapest"
-
 for i in folder_content:
-    name, ext = os.path.splitext(i)
+    file_full_path = os.path.join(photo_folder, i)
+    if os.path.isdir(file_full_path):
+        continue
+
+    name, ext = os.path.splitext(file_full_path)
 
     if ext.lower() in allowed_extensions:
-        photo_files.append(i)
+        photo_files.append(file_full_path)
+
+print(photo_files)
 
 
 # todo create a dictionary for store photo data: photo_data = {}
