@@ -12,3 +12,13 @@ print("="*50, "MAGIC NUMBER", "="*50)
 # f = formatted string
 print(f"There is number between {min_number} and {max_number}. Can you guess it?")
 print(f"You have {max_tries} tries.")
+
+user_guess = input("Your guess:")
+
+# game loop
+#                True
+while user_guess != str(magic_number):
+    print("Wrong number :(")
+    user_guess = input("Your guess:")
+
+print("Game ends...")
