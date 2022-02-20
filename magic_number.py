@@ -29,6 +29,6 @@ while user_guess != str(magic_number):
     user_guess = input("Your guess:")
 
 if user_guess == str(magic_number):
-    print(f"You win!!! My number was {max_number}")
+    print(f"You win!!! My number was {magic_number}")
 else:
     print("Game over...")
