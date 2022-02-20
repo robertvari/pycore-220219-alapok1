@@ -1,10 +1,12 @@
+import random
+
 # game constants
 min_number = 1
 max_number = 10
 max_tries = 3
 
 # random number
-magic_number = 5
+magic_number = random.randint(min_number, max_number)
 
 # show game intro
 print("="*50, "MAGIC NUMBER", "="*50)
