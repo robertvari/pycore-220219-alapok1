@@ -70,6 +70,8 @@ sheet["C1"] = "Size"
 sheet["D1"] = "Camera"
 sheet["E1"] = "ISO"
 
+# loop through photo_data
+    # collect data to an excel sheet
 for index, root_key in enumerate(list(photo_data)):
     row = index + 3
     sheet[f"A{row}"] = root_key
@@ -79,12 +81,6 @@ for index, root_key in enumerate(list(photo_data)):
     sheet[f"D{row}"] = photo_data[root_key]["camera"]
     sheet[f"E{row}"] = str(photo_data[root_key]["iso"])
 
-
-
-
-
-# todo loop through photo_data
-    # todo collect data to an excel sheet
 
 # todo save data to photo_data.json
 
