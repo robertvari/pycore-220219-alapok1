@@ -1,4 +1,7 @@
 import os
+from PIL import Image, ExifTags
+from openpyxl import Workbook
+
 
 # photo_folder = input("Where are your photos?")
 photo_folder = "C:/Work/_PythonSuli/pycore-220219/photos"
