@@ -7,6 +7,7 @@ max_tries = 3
 
 # random number
 magic_number = random.randint(min_number, max_number)
+print(f"MAGIC NUMBER: {magic_number}")
 
 # show game intro
 print("="*50, "MAGIC NUMBER", "="*50)
@@ -26,6 +27,12 @@ while user_guess != str(magic_number):
         print("Maybe next time!")
         break
 
+    # user_guess must be compatible with int
+    if int(user_guess) < magic_number:
+        print("You guess is lower")
+    else:
+        print("Your guess is higher")
+
     print(f"Wrong number :( You have {max_tries} tries left.")
     user_guess = input("Your guess:")
 
@@ -33,4 +40,4 @@ while user_guess != str(magic_number):
 if user_guess == str(magic_number):
     print(f"You win!!! My number was {magic_number}")
 else:
-    print("Game over...")
+    print(f"Game over... My number was {magic_number}")
