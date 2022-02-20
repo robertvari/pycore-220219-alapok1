@@ -15,7 +15,7 @@ assert os.path.isdir(photo_folder), "Path must be a folder."
 folder_content = os.listdir(photo_folder)
 
 
-# todo filter result. Only accept .jpg files photo_files = []
+# filter result. Only accept .jpg and .png files photo_files = []
 photo_files = []
 allowed_extensions = [".jpg", ".jpeg", ".png"]
 
@@ -28,8 +28,6 @@ for i in folder_content:
 
     if ext.lower() in allowed_extensions:
         photo_files.append(file_full_path)
-
-print(photo_files)
 
 
 # todo create a dictionary for store photo data: photo_data = {}
