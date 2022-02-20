@@ -1,6 +1,7 @@
 import os
 
-photo_folder = input("Where are your photos?")
+# photo_folder = input("Where are your photos?")
+photo_folder = "C:/Work/_PythonSuli/pycore-220219/photos"
 
 # check if path exists
                 # False                       print this!
@@ -10,9 +11,24 @@ assert os.path.exists(photo_folder), "This folder does not exist!"
 assert os.path.isdir(photo_folder), "Path must be a folder."
 
 
-# todo list folder for content os.listdir()
+# list folder for content os.listdir()
+folder_content = os.listdir(photo_folder)
+
 
 # todo filter result. Only accept .jpg files photo_files = []
+photo_files = []
+allowed_extensions = [".jpg", ".jpeg", ".png"]
+
+name, age, address = "Robert", 23, "Budapest"
+
+for i in folder_content:
+    name, ext = os.path.splitext(i)
+
+    if ext.lower() in allowed_extensions:
+        photo_files.append(i)
+
+print(photo_files)
+
 
 # todo create a dictionary for store photo data: photo_data = {}
 
