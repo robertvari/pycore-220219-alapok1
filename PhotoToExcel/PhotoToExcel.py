@@ -65,10 +65,19 @@ workbook = Workbook()
 sheet = workbook.active
 
 sheet["A1"] = "File Path"
+sheet.column_dimensions['A'].width = 80
+
 sheet["B1"] = "Date"
+sheet.column_dimensions['B'].width = 40
+
 sheet["C1"] = "Size"
+sheet.column_dimensions['C'].width = 40
+
 sheet["D1"] = "Camera"
+sheet.column_dimensions['D'].width = 40
+
 sheet["E1"] = "ISO"
+sheet.column_dimensions['E'].width = 40
 
 # loop through photo_data
     # collect data to an excel sheet
@@ -85,4 +94,5 @@ for index, root_key in enumerate(list(photo_data)):
 # todo save data to photo_data.json
 
 # todo save data to photo_data.xlsx into the photo directory
-workbook.save("photo_data.xlsx")
+excel_path = os.path.join(photo_folder, "photo_data.xlsx")
+workbook.save(excel_path)
