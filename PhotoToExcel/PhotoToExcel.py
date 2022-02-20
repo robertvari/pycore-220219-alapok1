@@ -70,7 +70,17 @@ sheet["C1"] = "Size"
 sheet["D1"] = "Camera"
 sheet["E1"] = "ISO"
 
-workbook.save("photo_data.xlsx")
+for index, root_key in enumerate(list(photo_data)):
+    row = index + 3
+    sheet[f"A{row}"] = root_key
+
+    sheet[f"B{row}"] = photo_data[root_key]["date"]
+    sheet[f"C{row}"] = str(photo_data[root_key]["size"])
+    sheet[f"D{row}"] = photo_data[root_key]["camera"]
+    sheet[f"E{row}"] = str(photo_data[root_key]["iso"])
+
+
+
 
 
 # todo loop through photo_data
@@ -79,3 +89,4 @@ workbook.save("photo_data.xlsx")
 # todo save data to photo_data.json
 
 # todo save data to photo_data.xlsx into the photo directory
+workbook.save("photo_data.xlsx")
