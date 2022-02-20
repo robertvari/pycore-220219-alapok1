@@ -27,8 +27,6 @@ for i in folder_content:
     if ext.lower() in allowed_extensions:
         photo_files.append(i)
 
-print(photo_files)
-
 
 # todo create a dictionary for store photo data: photo_data = {}
 
